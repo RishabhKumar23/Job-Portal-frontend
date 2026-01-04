@@ -73,7 +73,7 @@ const RegisterPage = () => {
     <div className="min-h-screen flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-2">Join {process.env.APP_NAME}</h1>
+          <h1 className="text-4xl font-bold mb-2">Join <span className="bg-linear-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">{process.env.NEXT_PUBLIC_APP_NAME}</span></h1>
           <p className="text-sm opacity-70">
             Create your account to start a new journey
           </p>

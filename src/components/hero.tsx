@@ -25,9 +25,7 @@ const Hero = () => {
             {/* main heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Find Your Dream Job at{" "}
-              <span className="inline-block">
-                Hire<span className="text-red-500">Heaven</span>
-              </span>
+              <span className="bg-linear-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">{process.env.NEXT_PUBLIC_APP_NAME}</span>
             </h1>
 
             {/* descripiton */}

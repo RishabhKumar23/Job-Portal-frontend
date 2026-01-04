@@ -28,8 +28,8 @@ const NavBar = () => {
           <div className="flex items-center">
             <Link href={"/"} className="flex items-center gap-1 group">
               <div className="text-2xl font-bold tracking-tight">
-                <span className="bg-linear-to-r from bg-blue-600 to-blue-800 bg-clip-text text-transparent">
-                  {process.env.APP_NAME}
+                <span className="bg-linear-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                  {process.env.NEXT_PUBLIC_APP_NAME}
                 </span>
               </div>
             </Link>

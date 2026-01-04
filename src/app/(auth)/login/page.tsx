@@ -58,7 +58,7 @@ const LoginPage = () => {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-2">
-            Welcome back to {process.env.APP_NAME}
+            Welcome back to <span className="bg-linear-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">{process.env.NEXT_PUBLIC_APP_NAME}</span>
           </h1>
           <p className="text-sm opacity-70">Sign in to continue your journey</p>
         </div>
