@@ -8,6 +8,7 @@ import axios from "axios";
 import Loading from "@/components/loading";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   Briefcase,
@@ -222,9 +223,11 @@ const CompanyPage = () => {
             <div className="px-8 pb-8">
               <div className="flex flex-col md:flex-row gap-6 items-start md:items-end -mt-16">
                 <div className="w-32 h-32 rounded-2xl border-4 border-background overflow-hidden shadow-xl bg-background shrink-0">
-                  <img
+                  <Image
                     src={company.logo}
                     alt=""
+                    width={128}
+                    height={128}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -240,7 +243,7 @@ const CompanyPage = () => {
                   target="_blank"
                   className="md:mb-4"
                 >
-                  <Button className="gap-2">
+                  <Button className="gap-2 cursor-pointer">
                     <Globe size={18} />
                     Visit Website
                   </Button>
@@ -272,7 +275,7 @@ const CompanyPage = () => {
               {isRecruiterOwner && (
                 <>
                   <DialogTrigger asChild>
-                    <Button className="gap-2">
+                    <Button className="gap-2 cursor-pointer">
                       <Plus size={18} />
                       Post New Job
                     </Button>
@@ -441,14 +444,14 @@ const CompanyPage = () => {
 
                     <DialogFooter>
                       <DialogClose asChild>
-                        <Button ref={addModalRef} variant={"outline"}>
+                        <Button ref={addModalRef} variant={"outline"} className="cursor-pointer">
                           Cancel
                         </Button>
                       </DialogClose>
                       <Button
                         disabled={btnLoading}
                         onClick={addJobHandler}
-                        className="gap-2"
+                        className="gap-2 cursor-pointer"
                       >
                         {btnLoading ? "Posting job..." : "Post Job"}
                       </Button>
@@ -524,7 +527,7 @@ const CompanyPage = () => {
                               <Button
                                 variant={"outline"}
                                 size={"sm"}
-                                className="gap-2"
+                                className="gap-2 cursor-pointer"
                               >
                                 <Eye size={16} /> View
                               </Button>

@@ -83,12 +83,15 @@ const JobsPage = () => {
           <div className="flex items-center justify-between flex-wrap gap-4 mb-4">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold mb-2">
-                Explore <span className="text-red-500">Oppertunities</span>
+                Explore{" "}
+                <span className="bg-linear-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                  Oppertunities
+                </span>
               </h1>
               <p className="text-base opacity-70">{jobs.length} jobs</p>
             </div>
 
-            <Button className="gap-2 h-11" onClick={clickEvent}>
+            <Button className="gap-2 h-11 cursor-pointer" onClick={clickEvent}>
               <Filter size={18} /> Filters
               {hasActiveFilters && (
                 <span className="ml-1 px-2 py-0.5 rounded-full bg-red-500 text-white text-xs">
@@ -107,7 +110,7 @@ const JobsPage = () => {
                   {title}
                   <button
                     onClick={() => setTitle("")}
-                    className="hover:bg-blue-200 dark:bg-blue-800 rounded-full p-0.5"
+                    className="hover:bg-blue-200 dark:bg-blue-800 rounded-full p-0.5 cursor-pointer"
                   >
                     <X size={14} />
                   </button>
@@ -120,7 +123,7 @@ const JobsPage = () => {
                   {location}
                   <button
                     onClick={() => setLocation("")}
-                    className="hover:bg-blue-200 dark:bg-blue-800 rounded-full p-0.5"
+                    className="hover:bg-blue-200 dark:bg-blue-800 rounded-full p-0.5 cursor-pointer"
                   >
                     <X size={14} />
                   </button>
@@ -153,7 +156,7 @@ const JobsPage = () => {
 
         <Dialog>
           <DialogTrigger asChild>
-            <Button ref={ref} className="hidden"></Button>
+            <Button ref={ref} className="hidden cursor-pointer"></Button>
           </DialogTrigger>
 
           <DialogContent className="sm:max-w-[500px]">
@@ -211,7 +214,7 @@ const JobsPage = () => {
               <Button
                 variant={"outline"}
                 onClick={clearFilter}
-                className="flex-1"
+                className="flex-1 cursor-pointer"
               >
                 Clear All
               </Button>

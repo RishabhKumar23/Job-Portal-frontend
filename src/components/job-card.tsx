@@ -3,6 +3,7 @@ import { useAppData } from "@/context/AppContext";
 import { Job } from "@/type";
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader } from "./ui/card";
+import Image from "next/image";
 import {
   ArrowRight,
   Briefcase,
@@ -51,9 +52,11 @@ const JobCard: React.FC<JobCardProps> = ({ job }) => {
 
           <Link href={`/company/${job.company_id}`} className="shrink-0">
             <div className="w-14 h-14 rounded-xl border-2 overflow-hidden hover:scale-105 transition-transform bg-background">
-              <img
+              <Image
                 src={job.company_logo}
                 alt=""
+                width={56}
+                height={56}
                 className="w-full h-full object-cover"
               />
             </div>

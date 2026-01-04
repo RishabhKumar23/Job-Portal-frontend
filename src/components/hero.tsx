@@ -2,6 +2,7 @@ import { ArrowRight, Briefcase, Search, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -93,9 +94,10 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-blue-400 opacity-20 blur-xl group-hover:opacity-30 transition-opacity"></div>
 
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-background">
-                <img
+                <Image
                   src="/hero.jpeg"
-                  className="object-cover object-center w-full h-full transform transition-transform duration-500 group-hover:scale-105"
+                  fill
+                  className="object-cover object-center transform transition-transform duration-500 group-hover:scale-105"
                   alt=""
                 />
               </div>

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import Image from "next/image";
 import {
   Dialog,
   DialogContent,
@@ -93,9 +94,11 @@ const Info: React.FC<AccontProps> = ({ user, isYourAccount }) => {
           <div className="absolute -bottom-16 left-8">
             <div className="relative group">
               <div className="w-32 h-32 rounded-full border-4 border-background overflow-hidden shadow-xl bg-background">
-                <img
+                <Image
                   src={user.profile_pic ? user.profile_pic : "/user.png"}
                   alt=""
+                  width={128}
+                  height={128}
                   className="w-full h-full object-cover"
                 />
               </div>

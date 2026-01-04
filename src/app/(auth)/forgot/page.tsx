@@ -54,7 +54,7 @@ const ForgotPage = () => {
 
             <Button
               disabled={btnLoading}
-              className="flex justify-center items-center gap-2"
+              className="flex justify-center items-center gap-2 cursor-pointer"
             >
               Submit
             </Button>

@@ -6,6 +6,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import Loading from "@/components/loading";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
 import {
   Briefcase,
   Building2,
@@ -170,9 +171,11 @@ const Company = () => {
                     className="flex items-center gap-4 p-4 rounded-lg border-2 hover:border-blue-500 transition-all bg-background"
                   >
                     <div className="h-16 w-16 rounded-full border-2 overflow-hidden shrink-0 bg-background">
-                      <img
+                      <Image
                         src={c.logo}
                         alt=""
+                        width={64}
+                        height={64}
                         className="w-full h-full object-cover"
                       />
                     </div>

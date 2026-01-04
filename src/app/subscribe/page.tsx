@@ -107,7 +107,7 @@ const SubscriptionPage = () => {
 
         <Button
           onClick={handleSubscribe}
-          className="w-full h-12 text-base gap-2"
+          className="w-full h-12 text-base gap-2 cursor-pointer"
         >
           <Crown size={18} /> Subscribe Now
         </Button>

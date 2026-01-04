@@ -40,7 +40,7 @@ const NavBar = () => {
             <Link href={"/"}>
               <Button
                 variant={"ghost"}
-                className="flex items-center gap-2 font-medium"
+                className="flex items-center gap-2 font-medium cursor-pointer"
               >
                 <Home size={16} /> Home
               </Button>
@@ -49,7 +49,7 @@ const NavBar = () => {
             <Link href={"/jobs"}>
               <Button
                 variant={"ghost"}
-                className="flex items-center gap-2 font-medium"
+                className="flex items-center gap-2 font-medium cursor-pointer"
               >
                 <Briefcase size={16} /> Jobs
               </Button>
@@ -58,7 +58,7 @@ const NavBar = () => {
             <Link href={"/about"}>
               <Button
                 variant={"ghost"}
-                className="flex items-center gap-2 font-medium"
+                className="flex items-center gap-2 font-medium cursor-pointer"
               >
                 <Info size={16} /> About
               </Button>
@@ -74,7 +74,7 @@ const NavBar = () => {
                 {isAuth ? (
                   <Popover>
                     <PopoverTrigger asChild>
-                      <button className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                      <button className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
                         <Avatar className="h-9 w-9 ring-2 ring-offset-2 ring-offset-background ring-blue-500/20 cursor-pointer hover:ring-blue-500/40 transition-all">
                           <AvatarImage
                             src={user ? (user.profile_pic as string) : ""}
@@ -99,7 +99,7 @@ const NavBar = () => {
 
                       <Link href={"/account"}>
                         <Button
-                          className="w-full justify-start gap-2"
+                          className="w-full justify-start gap-2 cursor-pointer"
                           variant={"ghost"}
                         >
                           <User size={16} /> My Profile
@@ -107,7 +107,7 @@ const NavBar = () => {
                       </Link>
 
                       <Button
-                        className="w-full justify-start gap-2 mt-1"
+                        className="w-full justify-start gap-2 mt-1 cursor-pointer"
                         variant={"ghost"}
                         onClick={logoutHandler}
                       >
@@ -118,7 +118,7 @@ const NavBar = () => {
                   </Popover>
                 ) : (
                   <Link href={"/login"}>
-                    <Button className="gap-2">
+                    <Button className="gap-2 cursor-pointer">
                       <User size={16} />
                       Sign In
                     </Button>
@@ -135,7 +135,7 @@ const NavBar = () => {
 
             <button
               onClick={toggleMenu}
-              className="p-2 rounded-lg hover:bg-accent transition-colors"
+              className="p-2 rounded-lg hover:bg-accent transition-colors cursor-pointer"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -155,7 +155,7 @@ const NavBar = () => {
           <Link href={"/"} onClick={toggleMenu}>
             <Button
               variant={"ghost"}
-              className="w-full justify-start gap-3 h-11"
+              className="w-full justify-start gap-3 h-11 cursor-pointer"
             >
               <Home size={18} /> Home
             </Button>
@@ -164,7 +164,7 @@ const NavBar = () => {
           <Link href={"/jobs"} onClick={toggleMenu}>
             <Button
               variant={"ghost"}
-              className="w-full justify-start gap-3 h-11"
+              className="w-full justify-start gap-3 h-11 cursor-pointer"
             >
               <Briefcase size={18} /> Jobs
             </Button>
@@ -173,7 +173,7 @@ const NavBar = () => {
           <Link href={"/about"} onClick={toggleMenu}>
             <Button
               variant={"ghost"}
-              className="w-full justify-start gap-3 h-11"
+              className="w-full justify-start gap-3 h-11 cursor-pointer"
             >
               <Info size={18} /> About
             </Button>
@@ -184,14 +184,14 @@ const NavBar = () => {
               <Link href={"/about"} onClick={toggleMenu}>
                 <Button
                   variant={"ghost"}
-                  className="w-full justify-start gap-3 h-11"
+                  className="w-full justify-start gap-3 h-11 cursor-pointer"
                 >
                   <User size={18} /> My Profile
                 </Button>
               </Link>
               <Button
                 variant={"destructive"}
-                className="w-full justify-start gap-3 h-11"
+                className="w-full justify-start gap-3 h-11 cursor-pointer"
                 onClick={() => {
                   logoutHandler();
                   toggleMenu();
@@ -202,7 +202,7 @@ const NavBar = () => {
             </>
           ) : (
             <Link href={"/login"} onClick={toggleMenu}>
-              <Button className="w-full justify-start gap-3 h-11 mt-2">
+              <Button className="w-full justify-start gap-3 h-11 mt-2 cursor-pointer">
                 <User size={18} /> SignIn
               </Button>
             </Link>

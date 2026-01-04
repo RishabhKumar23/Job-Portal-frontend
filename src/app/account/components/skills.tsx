@@ -73,7 +73,7 @@ const Skills: React.FC<AccontProps> = ({ user, isYourAccount }) => {
             </div>
             <Button
               onClick={addSkillHandler}
-              className="h-11 gap-2 px-6"
+              className="h-11 gap-2 px-6 cursor-pointer"
               disabled={!skill.trim() || btnLoading}
             >
               <Plus size={18} /> Add Skills
@@ -95,7 +95,7 @@ const Skills: React.FC<AccontProps> = ({ user, isYourAccount }) => {
                   {isYourAccount && (
                     <button
                       onClick={() => removeSkillHandler(e)}
-                      className="h-6 w-6 rounded-full text-red-500 flex items-center justify-evenly transition-all hover:bg-gray-600 hover:scale-110"
+                      className="h-6 w-6 rounded-full text-red-500 flex items-center justify-evenly transition-all hover:bg-gray-600 hover:scale-110 cursor-pointer"
                     >
                       <X size={14} />
                     </button>

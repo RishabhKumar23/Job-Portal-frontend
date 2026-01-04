@@ -214,7 +214,7 @@ const RegisterPage = () => {
                   </div>
                 )}
 
-                <Button disabled={btnLoading} className="w-full">
+                <Button disabled={btnLoading} className="w-full cursor-pointer">
                   {btnLoading ? "Please Wait..." : "Register"}
                   <ArrowRight size={18} />
                 </Button>

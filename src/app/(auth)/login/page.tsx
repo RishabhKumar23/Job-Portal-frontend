@@ -109,7 +109,7 @@ const LoginPage = () => {
               </Link>
             </div>
 
-            <Button disabled={btnLoading} className="w-full">
+            <Button disabled={btnLoading} className="w-full cursor-pointer">
               {btnLoading ? "Signing in..." : "Sign In"}
               <ArrowRight size={18} />
             </Button>

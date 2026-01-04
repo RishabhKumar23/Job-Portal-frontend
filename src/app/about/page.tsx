@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -11,8 +12,10 @@ const About = () => {
         <div className="max-w-4xl mx-auto">
           {/* Image */}
           <div className="flex justify-center mb-8">
-            <img
+            <Image
               src="/about.jpg"
+              width={500}
+              height={300}
               className="w-full max-w-[500px] rounded-2xl shadow-lg"
               alt={`About ${process.env.NEXT_PUBLIC_APP_NAME}`}
             />

@@ -124,7 +124,7 @@ const JobPage = () => {
             <div className="max-w-5xl mx-auto px-4 py-8">
               <Button
                 variant={"ghost"}
-                className="mb-6 gap-2"
+                className="mb-6 gap-2 cursor-pointer"
                 onClick={() => router.back()}
               >
                 <ArrowRight size={18} /> Back to jobs
@@ -170,7 +170,7 @@ const JobPage = () => {
                               <Button
                                 onClick={() => applyJobHandler(job.job_id)}
                                 disabled={btnLoading}
-                                className="gap-2 h-12 px-8"
+                                className="gap-2 h-12 px-8 cursor-pointer"
                               >
                                 <Briefcase size={18} />{" "}
                                 {btnLoading ? "Applying..." : "Easy Apply"}
@@ -322,6 +322,7 @@ const JobPage = () => {
                         onClick={() =>
                           updateApplicationHandler(e.application_id)
                         }
+                        className="cursor-pointer"
                       >
                         Update
                       </Button>
